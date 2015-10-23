@@ -1,0 +1,13 @@
+<h1>Sign Up here!</h1>
+<%= form_for(@user, url: signup_path) do |f|%>
+  <p>
+    <%= f.text_field :username, autofocus: true %>
+  </p>
+  <p>  
+    <%= f.password_field :password, required: true %>
+  </p>
+  <p>
+    <%= f.submit "Signup", class: "btn btn-primary" %>
+  </p>
+    <%= link_to "Have an account already? Log in here", login_path %>
+<% end %>
